@@ -7,7 +7,7 @@ public class EdemoJdbc {
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/stu","root","");
 
         Statement s= con.createStatement();
-        ResultSet rs = s.executeQuery("select * from stu");
+        ResultSet rs = s.executeQuery("select * from stu"); //here stu is table name
         while (rs.next())
         {
             System.out.println(rs.getString(2)+" "+ rs.getInt(3));
